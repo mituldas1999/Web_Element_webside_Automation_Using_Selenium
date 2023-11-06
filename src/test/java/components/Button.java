@@ -40,6 +40,11 @@ public class Button extends LoginSteps {
     public void clickSecondaryButton(){
         WebElement secondaryButton=driver.findElement(By.xpath("//body/div[@id='__next']/div[1]/div[2]/div[1]/main[1]/div[1]/div[1]/div[3]/div[1]/button[1]"));
         secondaryButton.click();
+        try{
+          Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         String secondaryButtonMessage= driver.findElement(By.xpath("//body/div[@id='__next']/div[1]/div[2]/div[1]/main[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]")).getText();
         Assert.assertEquals(secondaryButtonMessage,"Button Clicked","Secondary Button Clicking Message is not Matching!");
         System.out.println("Verified the Secondary Button Clicking Message!\n");
@@ -49,6 +54,11 @@ public class Button extends LoginSteps {
     public void clickSuccessButton(){
         WebElement successButton=driver.findElement(By.xpath("//body/div[@id='__next']/div[1]/div[2]/div[1]/main[1]/div[1]/div[1]/div[3]/div[1]/button[2]"));
         successButton.click();
+        try{
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         String clickSuccessButton= driver.findElement(By.xpath("//div[contains(text(),'Button Clicked')]")).getText();
         Assert.assertEquals(clickSuccessButton,"Button Clicked","Click Success Button Clicking Message is not Matching!");
         System.out.println("Verified Success Button Clicking Message!\n");
@@ -59,6 +69,11 @@ public class Button extends LoginSteps {
     public void clickErrorButton(){
         WebElement errorButton=driver.findElement(By.xpath("//body/div[@id='__next']/div[1]/div[2]/div[1]/main[1]/div[1]/div[1]/div[3]/div[1]/button[3]"));
         errorButton.click();
+        try{
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         String clickErrorButton= driver.findElement(By.xpath("//body/div[@id='__next']/div[1]/div[2]/div[1]/main[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]")).getText();
         Assert.assertEquals(clickErrorButton,"Button Clicked","Click Error Button Clicking Message is not Matching!");
         System.out.println("Verified Error Button Clicking Message!\n");
@@ -67,6 +82,11 @@ public class Button extends LoginSteps {
     public void clickDeleteButton(){
         WebElement deleteButton=driver.findElement(By.xpath("//body/div[@id='__next']/div[1]/div[2]/div[1]/main[1]/div[1]/div[1]/div[3]/div[1]/button[4]"));
         deleteButton.click();
+        try{
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         String clickDeleteButton= driver.findElement(By.xpath("//div[contains(text(),'Button Clicked')]")).getText();
         Assert.assertEquals(clickDeleteButton,"Button Clicked","Click Delete Button Clicking Message is not Matching!");
         System.out.println("Verified Delete Button Clicking Message!\n");
@@ -75,6 +95,11 @@ public class Button extends LoginSteps {
     public void clickSendButton(){
         WebElement sendButton=driver.findElement(By.xpath("//body/div[@id='__next']/div[1]/div[2]/div[1]/main[1]/div[1]/div[1]/div[3]/div[1]/button[5]"));
         sendButton.click();
+        try{
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         String clickSendButton= driver.findElement(By.xpath("//div[contains(text(),'Button Clicked')]")).getText();
         Assert.assertEquals(clickSendButton,"Button Clicked","Click Send Button Clicking Message is not Matching!");
         System.out.println("Verified Send Button Clicking Message!\n");
