@@ -17,8 +17,9 @@ public class AccordionTest extends LoginSteps {
     public void verifyAccordion(){
         accordion_pom=new Accordion_POM();
         accordion_pom.clickAccrodionLink();
+        accordion_pom.verifyAccrodionTextTitle();
+        accordion_pom.verifyAccordionText();
     }
-
     @AfterTest
     public void quitDriver(){
         driver.quit();
