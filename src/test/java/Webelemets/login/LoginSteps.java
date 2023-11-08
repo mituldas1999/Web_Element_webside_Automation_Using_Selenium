@@ -37,4 +37,11 @@ public class LoginSteps {
         boolean verify=driver.findElement(By.xpath("//header/div[1]/div[1]/div[1]/div[2]/button[1]")).isDisplayed();
         System.out.println(verify);
     }
+    public  void waitDeiver(long milisecound){
+        try {
+            Thread.sleep(milisecound);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 }
