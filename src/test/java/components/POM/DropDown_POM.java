@@ -37,12 +37,14 @@ public class DropDown_POM extends LoginSteps {
         checkDropdownLink.click();
         return dropDownLinkEnable;
     }
-    public void verifyDropDownTitle(){
-        String buttonPageTitleText=checkDropdownTitle.getText();
+    public String verifytheDropDownTitle(){
+        String buttonPageTitleText;
+        buttonPageTitleText = checkDropdownTitle.getText();
         Assert.assertEquals(buttonPageTitleText,"Dropdown","Accordion text title is not Matching!");
+        return buttonPageTitleText;
     }
 
-    public String verifyEditOption(){
+    public String verifytheEditOption(){
         checkDropdownOption.click();
         waitDeiver(2000);
         String verifyTheMessage=checkEditButton.getText();
@@ -50,7 +52,7 @@ public class DropDown_POM extends LoginSteps {
         return verifyTheMessage;
     }
 
-    public String verifyDuplicateOption(){
+    public String verifytheDuplicateOption(){
         checkDropdownOption.click();
         waitDeiver(2000);
         String verifyTheMessage=checkDuplicateButton.getText();
@@ -58,14 +60,14 @@ public class DropDown_POM extends LoginSteps {
         return verifyTheMessage;
     }
 
-    public String verifyArchiveOption(){
+    public String verifytheArchiveOption(){
         checkDropdownOption.click();
         waitDeiver(2000);
         String verifyTheMessage=checkArchivedButton.getText();
         checkArchivedButton.click();
         return verifyTheMessage;
     }
-    public String verifyMoreOption(){
+    public String verifytheMoreOption(){
         checkDropdownOption.click();
         waitDeiver(2000);
         String verifyTheMessage=checkMoreButton.getText();
