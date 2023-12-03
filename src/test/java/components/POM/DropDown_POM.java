@@ -40,7 +40,7 @@ public class DropDown_POM extends LoginSteps {
     public String verifytheDropDownTitle(){
         String buttonPageTitleText;
         buttonPageTitleText = checkDropdownTitle.getText();
-        Assert.assertEquals(buttonPageTitleText,"Dropdown","Accordion text title is not Matching!");
+        Assert.assertEquals(buttonPageTitleText,"Dropdown","Dropdown text title is not Matching!");
         return buttonPageTitleText;
     }
 
